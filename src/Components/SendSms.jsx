@@ -6,7 +6,12 @@ import Typography from "@material-ui/core/Typography";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { IconButton } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+var otpGenerator = require('otp-generator')
+ 
+var oyp = otpGenerator.generate(6, { upperCase: false, specialChars: false });
 
+console.log(oyp)
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
@@ -14,8 +19,8 @@ const useStyles = makeStyles({
   },
   messageInput: {
     marginBottom: 12,
-    width:"500px",
-    height:"150px"
+    width: "60%",
+    height: "150px",
   },
 });
 
@@ -27,14 +32,24 @@ function SendSms() {
       <Typography variant="h6" component="h2">
         Name : {history.location.state.FirstName}{" "}
         {history.location.state.SeconndName}
-      </Typography> <br/>
+      </Typography>{" "}
+      <br />
       <div>Mobile Number : {history.location.state.contact}</div>
-      <br/>
+      <br />
       <form>
-        <TextField className={classes.messageInput} required iid="outlined-basic" variant="outlined" label="Message for OTP" />
+        <TextField
+          className={classes.messageInput}
+          required
+          iid="outlined-basic"
+          variant="outlined"
+          label="Message for OTP"
+        />
       </form>
       <IconButton onClick={() => history.goBack()}>
         <ArrowBackIcon color="secondary" />
+      </IconButton>
+      <IconButton>
+        <ArrowForwardIcon color="secondary" />
       </IconButton>
     </Card>
   );
