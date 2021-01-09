@@ -28,6 +28,13 @@ export default function Appbar() {
     pathname: "/",
   });
  }
+ 
+ const HandleList = () => {
+  history.push({
+    pathname: "/contactlist",
+  });
+ }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -35,7 +42,7 @@ export default function Appbar() {
           <Typography onClick={handleHome} variant="h6" className={classes.title}>
            Kisan Network
           </Typography>
-          <Button color="inherit">Contact List</Button>
+          <Button onClick={HandleList} color="inherit">Contact List</Button>
         </Toolbar>
       </AppBar>
     </div>

@@ -39,7 +39,6 @@ function Info() {
       },
     });
   };
-  console.log(history.location.state);
   return (
     <Card align="center" className={classes.root}>
       <Typography variant="h6" component="h2">

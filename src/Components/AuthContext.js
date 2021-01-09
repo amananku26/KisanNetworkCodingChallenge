@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
-
+import firebase from "firebase"
+import db from "./firebase.js"
 const AuthContext = React.createContext();
 
 class AuthContextProvider extends React.Component {
@@ -23,13 +24,26 @@ class AuthContextProvider extends React.Component {
   }
 
   ManagegeInfo = (payload) => {
-   console.log("manahe",payload)
   };
-  render() {
-    //   console.log(this.state.users)
+
+  handleSendSmsToTwilio = (payload) => {
+
+    axios.post("http://localhost:8080/users",{
+      payload
+    })
+
+    db.collection('list').add({
+      name:`${payload.FirstName} ${payload.SeconndName}`,
+      contact:payload.SeconndName,
+      otp:payload.oyp,
+      message:payload.messageForOtp,
+      timestamp:firebase.firestore.FieldValue.serverTimestamp()
+  })  
+  }
+   render() {
     const { users } = this.state;
-    const {ManagegeInfo} = this;
-    const value = { users,ManagegeInfo };
+    const {ManagegeInfo,handleSendSmsToTwilio} = this;
+    const value = { users,ManagegeInfo,handleSendSmsToTwilio };
     return (
       <AuthContext.Provider value={value}>
         {this.props.children}
@@ -39,3 +53,4 @@ class AuthContextProvider extends React.Component {
 }
 
 export { AuthContext, AuthContextProvider };
+// module.exports =  {obj}
