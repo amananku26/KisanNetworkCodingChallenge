@@ -20,15 +20,21 @@
   * Clicking on info button it will take you to next page where you will every detail of that person
   * Now click on Forward arrow to go to next page or previous button to `goBack()`
   * Coming to next page here you can type customize message and OTP will generate by default 
-  
+
+* Bonus
+  * on header there is a navingation called contact list 
+  * onCLick it will show you all the list whre otp has sended to whom together with timestamp
+
 ##### Tech Stack Used
 <img src = "https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white"> <img src = "https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/-JavaScript-eed718?style=flat&logo=javascript&logoColor=ffffff"> <img src="https://img.shields.io/badge/-React-000000?style=flat&logo=react&logoColor=00c8ff">   <img src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white">   <img src="http://img.shields.io/badge/-Git-F1502F?style=flat&logo=git&logoColor=FFFFFF">   <img src="http://img.shields.io/badge/-Github-000000?style=flat&logo=github&logoColor=FFFFFF"> <img src = "https://img.shields.io/badge/-Firebase-E34F26?style=flat&logo=firebase&logoColor=white">
   
   
 ### Let You Walk through the UI 
-###### Login page
-![Login Page](https://github.com/amananku26/Facebook-Clone/blob/main/assets/loginfb.jpg)
-###### Home Page/ Dashboard
-![Home Page](https://github.com/amananku26/Facebook-Clone/blob/main/assets/123.jpg)
-###### Post
-![Post Page](https://github.com/amananku26/Facebook-Clone/blob/main/assets/POSTFB.jpg)
+###### Home page
+![Home Page](https://github.com/amananku26/contact-app/blob/main/assests/img1.jpg)
+###### Contact List Page
+![Contact List Page](https://github.com/amananku26/contact-app/blob/main/assests/img2.jpg)
+###### Profile Detail Page
+![Profile Detail Page](https://github.com/amananku26/contact-app/blob/main/assests/img3.jpg)
+###### SMS Send Page
+![SMS Send Page](https://github.com/amananku26/contact-app/blob/main/assests/img4.jpg)
